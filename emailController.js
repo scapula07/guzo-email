@@ -1,4 +1,4 @@
-var key = "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"
+var key = "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"
 const sgMail = require('@sendgrid/mail')
 sgMail.setApiKey(key)
 
