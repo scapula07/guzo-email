@@ -1,5 +1,8 @@
-var key = "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"
+const dotenv = require('dotenv').config()
+
+var key =process.env.API_KEY
 const sgMail = require('@sendgrid/mail')
+console.log(key)
 sgMail.setApiKey(key)
 
 

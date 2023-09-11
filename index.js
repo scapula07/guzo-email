@@ -3,9 +3,15 @@ const app = express()
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const router = require('./routes')
+const admin = require("firebase-admin");
+const serviceAccount=require("./firebase/service-account.json")
+const dotenv = require('dotenv').config()
 
 
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
 
+});
 
 
 // allowing cors
